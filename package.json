@@ -1,0 +1,50 @@
+{
+  "name": "trading-bot-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "start:pm2": "pm2 start ecosystem.config.js",
+    "stop:pm2": "pm2 stop ecosystem.config.js",
+    "restart:pm2": "pm2 restart ecosystem.config.js",
+    "logs:pm2": "pm2 logs",
+    "create-admin": "tsx src/scripts/createAdmin.ts",
+    "create-profiles": "tsx src/scripts/createMissingProfiles.ts",
+    "migrate:postgres": "tsx scripts/migrate-to-postgres.ts",
+    "db:setup": "psql $DATABASE_URL -f src/db/schema.sql",
+    "test:db": "tsx src/scripts/test-db-connection.ts",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lowdb": "^6.0.1",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "pg": "^8.18.0",
+    "winston": "^3.19.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/compression": "^1.8.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.5.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.16.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.2"
+  }
+}

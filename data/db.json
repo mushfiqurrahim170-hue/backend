@@ -1,0 +1,5864 @@
+{
+  "app_users": [
+    {
+      "id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "email": "mushfiqmoon3@gmail.com",
+      "password_hash": "$2a$10$S3q27nJiutv73YtJ.oHTzuKq/iNZw3O2ckR6PEsZur1duXeOt8Lu6",
+      "created_at": "2026-02-05T17:19:08.018Z"
+    },
+    {
+      "id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "email": "admin@mail.com",
+      "password_hash": "$2a$10$fF5uYxNC8gazeOEe.GK/XueYxGJLgcO8VUg95MblEXc99gCPHQ0uW",
+      "created_at": "2026-02-05T17:38:39.450Z"
+    },
+    {
+      "id": "d48a51c4-f0c0-4d4e-84c6-8543b4bcac6c",
+      "email": "moonbd01717@gmail.com",
+      "password_hash": "$2a$10$vhKbDeWQFh2WuXHlNkKSt.q2F75DW7rWt.X38dRKeJmXXWk27tT6a",
+      "created_at": "2026-02-05T19:09:26.012Z"
+    }
+  ],
+  "api_keys": [
+    {
+      "id": "6f5b091a-9c59-4344-a398-bf92f1acef0f",
+      "created_at": "2026-02-05T17:20:45.372Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "key_name": "fgrt",
+      "exchange": "binance",
+      "product": "futures",
+      "environment": "testnet",
+      "api_key_encrypted": "S1dwOU5pa203c1RHTnllRlg4cVFXYm5zRm5LdlgwemdieHoyWE5VdkdyQTE0S2VkYWx0YTFwZ2FLbFhaV0ltdg==",
+      "api_secret_encrypted": "aUl3QnpabGlGOGNVUXkzZkNFVUUyWmF0ajVIdWlkZkxVSDVlZWd4N1BncWJrQXJxbWZnQ1ZUeDM5UlZTR2M4WQ==",
+      "is_active": true
+    },
+    {
+      "id": "ed83ccb5-158b-4d78-9262-6bb078e3dc85",
+      "created_at": "2026-02-05T19:29:47.760Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "key_name": "mushfiqm",
+      "exchange": "binance",
+      "product": "spot",
+      "environment": "mainnet",
+      "api_key_encrypted": "VzhZdFB3TDI4TWxCYzdLQmFVSVJjRThuS2pHZGllZktINThhUEhsdDVUUTJuRHRvRDJtdUlvV05UaWdUTklpQQ==",
+      "api_secret_encrypted": "a0FqR3FNbjZONFFoc0tqeDQ5ZkE3WFc4QXFlemxzclppWHNtUEZMeUtJdGFVc0hqYmM4eVQyWVVsUmd0dWxpaA==",
+      "is_active": true
+    }
+  ],
+  "trading_strategies": [
+    {
+      "id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "created_at": "2026-02-05T19:24:33.169Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "name": "Daily Profit (10 Trades/Day)",
+      "description": "Balanced daily trading strategy optimized for 10 trades per day with consistent profits. Conservative risk with 1:2 R:R ratio.",
+      "strategy_type": "daily_profit",
+      "exchange": "binance",
+      "product": "futures",
+      "environment": "testnet",
+      "position_size_type": "fixed",
+      "position_size_value": 150,
+      "max_positions": 10,
+      "max_daily_loss": 0.5,
+      "max_drawdown_percent": 5,
+      "max_trades_per_day": 20,
+      "max_consecutive_losses": 1,
+      "tp1_percent": 0.8,
+      "tp1_close_percent": 40,
+      "tp2_percent": 1.5,
+      "tp2_close_percent": 35,
+      "tp3_percent": 2.5,
+      "tp3_close_percent": 25,
+      "use_tp1": true,
+      "use_tp2": true,
+      "use_tp3": true,
+      "stop_loss_percent": 0.6,
+      "use_trailing_stop": true,
+      "trailing_stop_activation": 0.8,
+      "trailing_stop_callback": 0.3,
+      "default_leverage": 7,
+      "allowed_pairs": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "BNBUSDT",
+        "SOLUSDT",
+        "XRPUSDT"
+      ],
+      "strategy_config": {
+        "htf_timeframe": "1h",
+        "ltf_timeframe": "5m",
+        "ema_fast": 9,
+        "ema_slow": 21,
+        "rsi_period": 14,
+        "rsi_overbought": 70,
+        "rsi_oversold": 30,
+        "volume_multiplier": 1.2,
+        "trade_interval_minutes": 144,
+        "min_signal_strength": 0.6
+      },
+      "is_active": true,
+      "updated_at": "2026-02-05T22:35:17.569Z",
+      "signal_mode": "auto",
+      "auto_signal_enabled": true,
+      "auto_signal_indicators": {
+        "ema_short": 12,
+        "ema_long": 26,
+        "rsi_period": 14,
+        "rsi_overbought": 70,
+        "rsi_oversold": 30,
+        "macd_fast": 12,
+        "macd_slow": 26,
+        "macd_signal": 9,
+        "volume_multiplier": 1.5
+      },
+      "auto_signal_interval": 1,
+      "last_signal_at": "2026-02-05T22:38:11.186Z"
+    }
+  ],
+  "webhook_logs": [
+    {
+      "id": "59dac92d-d39c-46a3-a554-20177686eb5e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 65673.7,
+          "confidence": 0.75
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Confidence below threshold"
+        }
+      },
+      "status": "filtered",
+      "error_message": "Confidence below threshold",
+      "created_at": "2026-02-05T19:26:01.409Z"
+    },
+    {
+      "id": "c59f52c9-eabc-4aa2-a69b-ddfc819236d7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 65673.7,
+          "confidence": 0.75
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Confidence below threshold"
+        }
+      },
+      "status": "filtered",
+      "error_message": "Confidence below threshold",
+      "created_at": "2026-02-05T19:27:00.904Z"
+    },
+    {
+      "id": "b8a5f77d-71c1-4095-9623-f8420f98319a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65230.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:01:01.132Z"
+    },
+    {
+      "id": "a7069cf0-2d47-4335-9651-e2cec49c54cb",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1925.77,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:01:01.596Z"
+    },
+    {
+      "id": "c622c671-110d-4ed3-b2bd-c5e0517e12e9",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 641.68,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:01:02.057Z"
+    },
+    {
+      "id": "5556fc2c-95dd-4444-8bfd-e2a80a87ffb6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.61,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:01:02.502Z"
+    },
+    {
+      "id": "050239ae-0087-43bd-89cb-b833d228f846",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.212,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:01:02.670Z"
+    },
+    {
+      "id": "1db3519d-d45f-4c5b-ae26-5db70a088b00",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65408.3,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:02:01.472Z"
+    },
+    {
+      "id": "ff034e29-64c6-4369-a682-b2b99b7dc080",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1930.36,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:02:01.936Z"
+    },
+    {
+      "id": "d3052c0f-1883-4926-ac62-09962a4a2542",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 642.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:02:02.396Z"
+    },
+    {
+      "id": "941a53dd-b6fe-4b23-bca1-78e022486027",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.61,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:02:02.856Z"
+    },
+    {
+      "id": "c38ad66c-02c3-4b67-9e5c-d395fd4e36ce",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2157,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:02:03.028Z"
+    },
+    {
+      "id": "67bc4304-5839-473a-8e97-bcd88cc4dace",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65408.3,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:03:01.469Z"
+    },
+    {
+      "id": "b2a3ce90-9124-4e0c-83c1-7709c977a8b8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1930.36,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:03:01.936Z"
+    },
+    {
+      "id": "1983ca97-28d4-46c0-8e7e-d07da92928b7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 641.83,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:03:02.380Z"
+    },
+    {
+      "id": "019af7f6-f06a-4053-8afd-36a278bb3ab2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.73,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:03:02.825Z"
+    },
+    {
+      "id": "bac3bdc5-998d-48fd-9d75-c7542515e2a3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2205,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:03:03.279Z"
+    },
+    {
+      "id": "0d533ee7-1efd-4b26-a63a-4cb34abcffc1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65367.2,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:04:01.310Z"
+    },
+    {
+      "id": "42970c92-960b-46ab-a349-94379c6bcbae",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1931.45,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:04:01.771Z"
+    },
+    {
+      "id": "3e60f3dc-615d-4d48-b6e8-6934bab04788",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 641.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:04:02.209Z"
+    },
+    {
+      "id": "bba94243-1de6-4eac-9f71-24bb4e0c1f0d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.84,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:04:02.382Z"
+    },
+    {
+      "id": "016d6ca0-04a9-4b58-8bb1-93026dd6fb50",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2149,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:04:02.825Z"
+    },
+    {
+      "id": "7f36ac9b-6bfd-4396-b624-203f5281d737",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65212.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:05:00.658Z"
+    },
+    {
+      "id": "c5fd75a6-129c-42a7-a07e-8e74239b27c7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1926.69,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:05:00.827Z"
+    },
+    {
+      "id": "d215c6c7-ddf1-4155-9b98-f7c370607ab0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 642.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:05:01.288Z"
+    },
+    {
+      "id": "d842f336-f616-4b75-b0fe-7ae52de698e4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.66,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:05:01.786Z"
+    },
+    {
+      "id": "ffa1b5b8-ddcc-497a-95b0-b561281b2a5b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2149,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:05:01.960Z"
+    },
+    {
+      "id": "25f5e85f-8048-496a-af5b-793663ad8af6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65280.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:06:01.499Z"
+    },
+    {
+      "id": "1524f5ef-f809-49c2-b9b7-eaae1d10cc32",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1926.72,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:06:01.661Z"
+    },
+    {
+      "id": "6c5172da-4b3e-4c4a-b148-1c9250b05106",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 641.72,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:06:02.105Z"
+    },
+    {
+      "id": "0e768226-6f56-4e25-9d66-30c9ac76e6b6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.59,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:06:02.305Z"
+    },
+    {
+      "id": "2504eb2a-9a00-483b-be7a-6c9f346b6eef",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.211,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:06:02.767Z"
+    },
+    {
+      "id": "67c099cb-47c0-4490-8df2-37e9f47a2445",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65211.5,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:08:00.973Z"
+    },
+    {
+      "id": "f6983a87-0e77-47ea-96e2-c4c653fd0be2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1919.38,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:08:01.158Z"
+    },
+    {
+      "id": "7b5fb132-4bf3-49c0-88d4-c8d50c0c68b4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 639.03,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:08:01.627Z"
+    },
+    {
+      "id": "c684fee1-eb61-4af7-aa1e-096b36a1a913",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.44,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:08:01.806Z"
+    },
+    {
+      "id": "2cf0b066-88fa-413a-a6a1-2a3753d1421e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2063,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:08:02.271Z"
+    },
+    {
+      "id": "6b3495b0-4c7c-4e6a-8103-d2d316b7d1f1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65454.3,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:09:00.904Z"
+    },
+    {
+      "id": "f713a18a-0d9c-4a3f-80f7-471e3710e1c8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1937.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:09:01.347Z"
+    },
+    {
+      "id": "d00e13bd-c7b1-4bb4-93bc-2d1ea4191e90",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 643.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:09:01.800Z"
+    },
+    {
+      "id": "f35224f2-c505-44fb-85ab-ed5de29892bf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.67,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:09:02.249Z"
+    },
+    {
+      "id": "0d31e5e1-4f71-4426-889c-3b3bd4c910c6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2063,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:09:02.690Z"
+    },
+    {
+      "id": "93b5cb36-dc46-4c0b-9771-da30f227f377",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65563.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:10:01.441Z"
+    },
+    {
+      "id": "6cd89693-6b6c-4f3f-ba94-5fe2fbce1e38",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1937.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:10:01.903Z"
+    },
+    {
+      "id": "b4005e35-eb5e-4fe4-a772-e11c8fb40e4a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 644.07,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:10:02.352Z"
+    },
+    {
+      "id": "a18ff8bb-1f5c-4a26-a220-cdabe32199b1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.89,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:10:02.798Z"
+    },
+    {
+      "id": "0ab58f20-035b-481b-b979-318d3a45c331",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2167,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:10:03.241Z"
+    },
+    {
+      "id": "6b0cddcc-38f4-437f-a35d-a8fa958cb0f6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65476.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:11:01.022Z"
+    },
+    {
+      "id": "3ed6f4f5-1eed-4146-97dd-1be3db7d43a0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1936.58,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:11:01.196Z"
+    },
+    {
+      "id": "125bfca9-883d-4a1b-b10f-2025c124c778",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 644.07,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:11:01.649Z"
+    },
+    {
+      "id": "569480dc-8d09-4dca-adae-096f43e1b3bc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.84,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:11:02.098Z"
+    },
+    {
+      "id": "2b5e4e61-6356-4102-aac9-5a5dbcc6361b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.212,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:11:02.264Z"
+    },
+    {
+      "id": "39b2b16d-ad5e-46a3-8402-4a4d7267dcba",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65379.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:12:00.661Z"
+    },
+    {
+      "id": "bbd7bc4c-7b94-4032-9c65-3984ee709355",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1935.16,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:12:00.822Z"
+    },
+    {
+      "id": "0c772835-3450-4756-8e7d-b776329a956d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 643.37,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:12:01.268Z"
+    },
+    {
+      "id": "f9ba0b8e-e78b-49e1-a1b1-c236714cd8a7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.84,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:12:01.711Z"
+    },
+    {
+      "id": "38071b2d-1b11-43ca-8ccd-ea2b84398f4e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2091,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:12:01.879Z"
+    },
+    {
+      "id": "fb0a73eb-a3ab-471c-8e5f-d9001ba55589",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65225.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:13:02.206Z"
+    },
+    {
+      "id": "ad00f150-697b-4b52-ac8f-901bccd32e3f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1929.34,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:13:02.659Z"
+    },
+    {
+      "id": "ed9df4da-96b1-4a20-830f-fafac1ff4698",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 641.21,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:13:02.821Z"
+    },
+    {
+      "id": "b7c5bfbf-c027-4207-8b83-aaa0282aca28",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.67,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:13:03.264Z"
+    },
+    {
+      "id": "17d5b261-6fff-4046-9231-5951449d5266",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2091,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:13:03.720Z"
+    },
+    {
+      "id": "1d51ba54-d097-4c9c-acd8-f3b0b41e1c52",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65225.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:14:00.613Z"
+    },
+    {
+      "id": "7194e2a2-47b1-4934-87b9-4d1ddb173151",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1929.49,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:14:00.793Z"
+    },
+    {
+      "id": "ca1ac32d-701e-4c46-b7ce-a4f3bdfdfd4e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 640.89,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:14:01.240Z"
+    },
+    {
+      "id": "83152819-1622-4a89-b925-36531a3f5c41",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:14:01.729Z"
+    },
+    {
+      "id": "b1077b37-4c5e-444b-94fb-e6d878cab93e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2062,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:14:02.171Z"
+    },
+    {
+      "id": "37311859-1332-42b0-9ecf-60014328812e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65106.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:15:01.413Z"
+    },
+    {
+      "id": "85756318-35f3-4c38-8381-763f9d3faf59",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1929.49,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:15:01.880Z"
+    },
+    {
+      "id": "5d28d191-9bd2-4b52-af5c-a3425648ba20",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 640.89,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:15:02.337Z"
+    },
+    {
+      "id": "ff398afa-ca2b-4740-bb69-fb3fb53bf2a9",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.44,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:15:02.777Z"
+    },
+    {
+      "id": "dae62c65-faec-4a35-abf1-4adec2f2318b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2033,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:15:03.241Z"
+    },
+    {
+      "id": "c76aa8c9-978a-4351-ae84-e6eedb934fdf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 65091.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:16:00.766Z"
+    },
+    {
+      "id": "37c72d81-ffb4-4ad6-8755-797fbda54ec0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1918.35,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:16:01.208Z"
+    },
+    {
+      "id": "c24a8235-98f5-4610-a8f0-76d741a1448a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 639.04,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:16:01.677Z"
+    },
+    {
+      "id": "facf95ff-2856-41eb-9cd2-eb02511e1a86",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 81.33,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:16:01.858Z"
+    },
+    {
+      "id": "0e49a25d-7e10-47eb-85da-23ef9a6ed41a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.2015,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:16:02.304Z"
+    },
+    {
+      "id": "3fee1998-cf3f-463a-9870-04540fa68163",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "BTCUSDT",
+          "price": 65107.7,
+          "confidence": 1
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:17:02.127Z"
+    },
+    {
+      "id": "7d65120e-cfe2-423f-acf7-5beab8fbfcba",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1918.35,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:17:02.578Z"
+    },
+    {
+      "id": "a6e721c4-d366-49ae-8197-a770a77a46cc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 637.56,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:17:02.748Z"
+    },
+    {
+      "id": "030e157e-def7-486a-bc1c-f8c5a439daaa",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 80.44,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:17:02.910Z"
+    },
+    {
+      "id": "92d6fb0a-143e-463f-935e-aef00ac4443a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.187,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:17:04.090Z"
+    },
+    {
+      "id": "11fe887a-81db-4819-8054-021915495fbb",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 64236.5,
+          "confidence": 0.75
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Confidence below threshold"
+        }
+      },
+      "status": "filtered",
+      "error_message": "Confidence below threshold",
+      "created_at": "2026-02-05T20:18:00.901Z"
+    },
+    {
+      "id": "85379c5e-f337-41c0-99c7-a5ecfee19120",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "ETHUSDT",
+          "price": 1895.49,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:18:02.163Z"
+    },
+    {
+      "id": "c3887332-293f-4294-88cb-74770d4e7450",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 632.22,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:18:02.396Z"
+    },
+    {
+      "id": "c70d0341-b530-47f7-9fcc-f7028d3f38f0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 80.61,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:18:03.833Z"
+    },
+    {
+      "id": "1e858f4a-0ee0-4ab8-be60-51073d22f410",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.187,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:18:05.174Z"
+    },
+    {
+      "id": "8521d85a-6ac8-42e1-9502-91f6b30e3c40",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 64018.4,
+          "confidence": 0.75
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Confidence below threshold"
+        }
+      },
+      "status": "filtered",
+      "error_message": "Confidence below threshold",
+      "created_at": "2026-02-05T20:19:01.304Z"
+    },
+    {
+      "id": "bd549215-dc6e-4211-a111-e2199886bcdf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "ETHUSDT",
+          "price": 1895.49,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:19:02.344Z"
+    },
+    {
+      "id": "9e228d2b-7f74-4410-91c1-22db33a77bd7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 632.22,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:19:02.800Z"
+    },
+    {
+      "id": "1c598b94-a999-47b4-8f1f-c35a11ec4ea2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 80.71,
+          "confidence": 1
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:19:03.557Z"
+    },
+    {
+      "id": "56e467b0-1acd-4bbe-9019-a51119c3d3e5",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.1907,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:19:04.889Z"
+    },
+    {
+      "id": "2518b0f2-8bde-46a8-bfb8-2f8c6b5be574",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 64467,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:20:00.816Z"
+    },
+    {
+      "id": "ae10ceff-da00-4124-a68a-aa84ad79f698",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "ETHUSDT",
+          "price": 1897.97,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:20:01.887Z"
+    },
+    {
+      "id": "44becffc-a3e0-4e10-8b0a-bd6c3f0428c6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BNBUSDT",
+          "price": 632.7,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:20:02.945Z"
+    },
+    {
+      "id": "ac0677f1-c51b-4d53-920b-492449712bf2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 80.71,
+          "confidence": 1
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:20:04.285Z"
+    },
+    {
+      "id": "adea6763-6178-4268-86df-4a5476560482",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.1907,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:20:05.040Z"
+    },
+    {
+      "id": "01035596-630f-4c4e-a1f0-3951e3de0b71",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 64540.5,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:21:01.279Z"
+    },
+    {
+      "id": "27a95d1c-c297-474e-bd18-c5c7537385ff",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "ETHUSDT",
+          "price": 1897.97,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:21:02.361Z"
+    },
+    {
+      "id": "28bb3db4-b5b9-4e27-8cf2-89b0d64ca9ee",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BNBUSDT",
+          "price": 632.27,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:21:03.412Z"
+    },
+    {
+      "id": "de04cd5b-fcb7-45cc-938f-c25ef4bcb951",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 80.47,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:21:04.485Z"
+    },
+    {
+      "id": "cde534b7-1627-4cd3-b65f-7b7a6d6ad0bf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.1844,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Trade execution failed",
+      "created_at": "2026-02-05T20:21:05.531Z"
+    },
+    {
+      "id": "94293377-fea9-4076-a5d8-4f5ab046ff0e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63714.3,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:24:01.337Z"
+    },
+    {
+      "id": "f408a479-f8dd-4f20-bada-bfab34381a55",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1871.36,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:24:01.970Z"
+    },
+    {
+      "id": "bdc93606-499d-4bf5-8ecc-377a10f17e79",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 629.09,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:24:02.184Z"
+    },
+    {
+      "id": "a9b46f27-b4fb-4731-9ab8-0e199ab5b9ac",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 80.28,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Precision is over the maximum defined for this asset.",
+      "created_at": "2026-02-05T20:24:03.520Z"
+    },
+    {
+      "id": "d3b23ffa-ca47-4d08-82cb-f127d67a5e15",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1684,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:24:03.965Z"
+    },
+    {
+      "id": "08c33766-fccf-4bc8-a613-e409245fedc2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63632.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:26:01.421Z"
+    },
+    {
+      "id": "5fbb2367-1b9d-466d-9e79-c4937e46d035",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1875.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:26:01.589Z"
+    },
+    {
+      "id": "75d4653e-e1d7-41ef-9017-2f1ded3e99d8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 626.61,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:26:02.036Z"
+    },
+    {
+      "id": "2cae1196-8f34-4378-8f10-85674b5d9024",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 78.01,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Precision is over the maximum defined for this asset.",
+      "created_at": "2026-02-05T20:26:03.122Z"
+    },
+    {
+      "id": "29707f61-2c33-4763-93b1-b47af82dba2e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1561,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:26:03.593Z"
+    },
+    {
+      "id": "55ade9be-3c00-430f-8dbf-541ee7252b4a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63632.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:27:00.922Z"
+    },
+    {
+      "id": "7daf6591-6245-4740-8a6e-07968b864a4c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1875.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:27:01.365Z"
+    },
+    {
+      "id": "76a58eb7-5bd2-45a4-8adc-c8816271dcb3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 620.14,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:27:01.814Z"
+    },
+    {
+      "id": "4b928cfc-83a8-4e2d-abfd-000fec8f45f7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.11,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:27:02.271Z"
+    },
+    {
+      "id": "7b09bb58-22cf-4d9a-a2c6-6bd8b2c9c7c8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1434,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:27:02.724Z"
+    },
+    {
+      "id": "e90bb5cf-7590-49a4-8a88-ba6eca671d1d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 64122.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:28:00.594Z"
+    },
+    {
+      "id": "d08acaee-e15d-40e7-8723-c953a4d80fcf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BNBUSDT",
+          "price": 626.01,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Precision is over the maximum defined for this asset.",
+      "created_at": "2026-02-05T20:28:03.977Z"
+    },
+    {
+      "id": "30366584-fc9e-4afe-b6bb-efd6c8510321",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "SOLUSDT",
+          "price": 79.01,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Precision is over the maximum defined for this asset.",
+      "created_at": "2026-02-05T20:28:05.025Z"
+    },
+    {
+      "id": "3979489e-3914-45e2-ba36-9ee1b3861e66",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "XRPUSDT",
+          "price": 1.169,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        }
+      },
+      "status": "failed",
+      "error_message": "Precision is over the maximum defined for this asset.",
+      "created_at": "2026-02-05T20:28:05.517Z"
+    },
+    {
+      "id": "24c37e62-ae9a-4e90-878e-bf82c9f22da8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63736.8,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:32:01.638Z"
+    },
+    {
+      "id": "00ebe54c-ce9b-436f-9ebe-4608892416dc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 625.82,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:32:05.560Z"
+    },
+    {
+      "id": "22a06de4-e64c-4050-922a-50ee921101b0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63524.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:33:00.698Z"
+    },
+    {
+      "id": "96030d5a-2e83-4652-a209-8f37bf235308",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 625.82,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:33:03.489Z"
+    },
+    {
+      "id": "7901b04e-724f-4d83-85d4-f16fca85d639",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1595,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:33:05.667Z"
+    },
+    {
+      "id": "48f757b5-d8c1-4cbb-992f-f724f0d4f14b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63738.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:35:01.723Z"
+    },
+    {
+      "id": "090a6c2c-fd52-4ee7-a304-a550169330ee",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 626.1,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:35:04.823Z"
+    },
+    {
+      "id": "91abde28-7af9-4462-976c-c008344f21a3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1663,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:35:07.251Z"
+    },
+    {
+      "id": "64f4b455-c20c-40aa-a1fd-e3d8b469004a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63738.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:36:00.948Z"
+    },
+    {
+      "id": "aeef6c5d-7a77-4dd8-b558-54fcac4c72fd",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1867.97,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:36:01.397Z"
+    },
+    {
+      "id": "b0430dc1-cc74-484b-8a41-e42e999d69e3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 625.94,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:36:01.848Z"
+    },
+    {
+      "id": "2703a28f-23df-4068-912e-a6c5f0cf874c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1651,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:36:04.292Z"
+    },
+    {
+      "id": "cb46a3bd-5e50-43d7-890e-2c0a1719536b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 63265.9,
+          "confidence": 0.75
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Confidence below threshold"
+        }
+      },
+      "status": "filtered",
+      "error_message": "Confidence below threshold",
+      "created_at": "2026-02-05T20:38:01.130Z"
+    },
+    {
+      "id": "dc64312b-65d3-4ffe-a38c-b4f8d5da483a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1863.7,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:38:01.711Z"
+    },
+    {
+      "id": "dc988a01-cd16-440b-b8c0-28e003905597",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 623.73,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:38:01.873Z"
+    },
+    {
+      "id": "913670f1-7f3e-45c3-9230-8596be72c1eb",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:38:02.315Z"
+    },
+    {
+      "id": "b7e8b74b-f97b-40e1-862e-9a91f045a39a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1628,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:38:02.757Z"
+    },
+    {
+      "id": "6550095d-87c3-40ba-b838-eb6203ee64c2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63401,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:39:00.621Z"
+    },
+    {
+      "id": "6bcc1352-a146-4a70-8c1a-e2c1e15743b2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1863.7,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:39:01.064Z"
+    },
+    {
+      "id": "d76770fc-8452-4823-8f19-dbbc3f017fd5",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 624.32,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:39:01.505Z"
+    },
+    {
+      "id": "38a54a24-f60f-45ad-994b-5b82a61a372d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:39:01.949Z"
+    },
+    {
+      "id": "5da32508-63ee-4d2f-8786-e2de5250b847",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1628,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:39:02.397Z"
+    },
+    {
+      "id": "e448cda1-3eea-45eb-a791-8ba0ac4b759d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63609.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:40:01.373Z"
+    },
+    {
+      "id": "55cd4460-9683-4d0e-b0b5-aa318ebd18ca",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1859.98,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:40:01.832Z"
+    },
+    {
+      "id": "8a93690b-c95f-4931-8068-7f7c9dcfc89b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 623.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:40:02.275Z"
+    },
+    {
+      "id": "41c633ef-e003-4116-80b9-ebb41bbef3f3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.92,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:40:02.740Z"
+    },
+    {
+      "id": "8aebd38b-c22b-49ba-9637-bf4658ddff07",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1803,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:40:02.925Z"
+    },
+    {
+      "id": "898f00e5-41ae-45b1-88b1-96002c27ba4f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63748,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:41:00.730Z"
+    },
+    {
+      "id": "b63d73f4-f342-4dff-b75b-ab7bf1b65229",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1859.61,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:41:01.189Z"
+    },
+    {
+      "id": "2a66f2fb-9341-4d89-abb1-bbd10af5859e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 623.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:41:01.635Z"
+    },
+    {
+      "id": "7fa747c8-a2f0-431f-98dd-368830d82f77",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:41:01.797Z"
+    },
+    {
+      "id": "6af45718-b998-433b-b574-fe2b66641f6e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1786,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:41:01.985Z"
+    },
+    {
+      "id": "8d2fe031-1bc6-4ba1-82ac-2731f8d38718",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63584.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:42:01.274Z"
+    },
+    {
+      "id": "301777f0-78e9-4419-a2ec-b30a6ff52f57",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1872.39,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:42:01.723Z"
+    },
+    {
+      "id": "e4f1d8d2-6140-42d8-9fc6-e9793ca65a02",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 628.45,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:42:02.174Z"
+    },
+    {
+      "id": "1a83b275-49a4-4ee5-acfb-f2007ddbc707",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.57,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:42:02.621Z"
+    },
+    {
+      "id": "de2eae0d-ad12-4e0f-82e4-c0c69319a9d8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1987,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:42:03.077Z"
+    },
+    {
+      "id": "12020cc1-36ce-43bc-9658-1101c5b7dba4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63816.7,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:43:00.782Z"
+    },
+    {
+      "id": "82620444-0759-4bda-a7af-69c082291c82",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1872.39,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:43:01.242Z"
+    },
+    {
+      "id": "7ea3cf0b-b14b-4053-b9d7-c614089d7b70",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 628.45,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:43:01.719Z"
+    },
+    {
+      "id": "199410b9-2e67-4320-872e-3c096ce70c00",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.57,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:43:02.179Z"
+    },
+    {
+      "id": "05a33ef5-cff5-4095-b0b8-4fb94d32dccc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1963,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:43:02.352Z"
+    },
+    {
+      "id": "23e82d21-6f08-4e36-ab17-48313d9a93b4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63780.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:44:01.312Z"
+    },
+    {
+      "id": "f55ef37b-7586-4e10-8c09-66bdeea34eaa",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1860.23,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:44:01.768Z"
+    },
+    {
+      "id": "885b215e-db98-449f-a0e4-346a0ab5c1c4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 627.96,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:44:02.222Z"
+    },
+    {
+      "id": "bbe496d9-593c-467c-a274-c14d44ebb5f0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.49,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:44:02.665Z"
+    },
+    {
+      "id": "11445528-4635-4b5d-9338-b15dbe0dc9e8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1959,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:44:02.830Z"
+    },
+    {
+      "id": "88e4b865-f485-4793-b858-e49029b7c43e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63819.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:45:00.621Z"
+    },
+    {
+      "id": "1bef52a7-fd5d-40ca-a73e-b8058a1b58b4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1860.77,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:45:00.787Z"
+    },
+    {
+      "id": "35eccc7b-db78-44ad-befa-ecb5b3ecab43",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 628.88,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:45:01.267Z"
+    },
+    {
+      "id": "d5849f78-ff00-422f-a50c-6ef965f39a9a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.49,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:45:01.744Z"
+    },
+    {
+      "id": "29c09737-f803-4c91-99e1-32c9b687b9e0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1959,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:45:01.915Z"
+    },
+    {
+      "id": "52a7b243-40a8-48dc-b011-fa81794bd03f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63632.2,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:46:01.289Z"
+    },
+    {
+      "id": "58bc2b8e-e4f4-4226-ba05-1f3ff59eca46",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1863.73,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:46:01.775Z"
+    },
+    {
+      "id": "da5bc921-1e51-4c3f-a4aa-e0a65a5702db",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 626.89,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:46:02.223Z"
+    },
+    {
+      "id": "c55184da-4db0-46bb-9321-b3ad111ee6bb",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.42,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:46:02.671Z"
+    },
+    {
+      "id": "ce9cadb2-375d-4277-b69f-8375264c7de8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1954,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:46:02.836Z"
+    },
+    {
+      "id": "9553b74d-0e37-4f9a-af42-20e293f3233f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63632.2,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:47:00.658Z"
+    },
+    {
+      "id": "66a85866-145c-46a5-b139-57c35b11de80",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1865.53,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:47:00.832Z"
+    },
+    {
+      "id": "05819118-5187-4fd8-a3df-895934425f4c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 628.18,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:47:01.298Z"
+    },
+    {
+      "id": "8112073b-0751-49b5-9087-317de17f71f1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 79.42,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:47:01.762Z"
+    },
+    {
+      "id": "e59c70a3-b71c-44f4-a13c-f37a2140ee0c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1911,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:47:01.939Z"
+    },
+    {
+      "id": "dfc3b7fc-9241-42ed-abee-4101a29579ed",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63450.7,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:48:01.360Z"
+    },
+    {
+      "id": "00a96942-4937-4f47-969d-6fd6324b4866",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1865.53,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:48:01.857Z"
+    },
+    {
+      "id": "7483e178-a4ce-4cb4-9114-60fc96b541b4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 625.18,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:48:02.076Z"
+    },
+    {
+      "id": "3556e3df-0ad2-4e4d-8302-57a95304dff8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.91,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:48:02.596Z"
+    },
+    {
+      "id": "0ab1e5e2-3148-4f0e-b92a-e8e51b9ad8c6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1911,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:48:03.052Z"
+    },
+    {
+      "id": "01194e72-d948-4dc0-9155-fca07d32608a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63484.4,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:49:00.780Z"
+    },
+    {
+      "id": "393a207c-6835-4529-95a5-fc45e34fb830",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1856.17,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:49:01.231Z"
+    },
+    {
+      "id": "e37585df-e751-42c9-bf53-3525b1c808cd",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 624.45,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:49:01.696Z"
+    },
+    {
+      "id": "9053b494-7954-4415-8a80-8c95a816a6c7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.91,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:49:02.161Z"
+    },
+    {
+      "id": "57cc97f4-338e-41f3-8093-92966e341ed8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1871,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:49:02.339Z"
+    },
+    {
+      "id": "d587887c-9bcf-4410-a90a-3b4136195df0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63342.8,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:50:01.362Z"
+    },
+    {
+      "id": "4c15290d-ea6d-44a2-a604-6375d3965d4e",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1856.17,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:50:01.526Z"
+    },
+    {
+      "id": "c55fccac-625c-4828-8ba5-4d1b3154a1ff",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 624.09,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:50:01.986Z"
+    },
+    {
+      "id": "378f104e-2c6a-45c1-b17f-160218bc37f7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.66,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:50:02.155Z"
+    },
+    {
+      "id": "4b014e1c-2a38-4d06-8c80-b41b784905ed",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1841,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:50:02.633Z"
+    },
+    {
+      "id": "2d963f58-1ab6-4d6c-95cd-1931257be37f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63229.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:51:01.169Z"
+    },
+    {
+      "id": "f03f9f19-ce0d-4347-b82c-77b0452cf797",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1850.6,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:51:01.372Z"
+    },
+    {
+      "id": "9c20ef30-24b4-43de-9942-684dab769811",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 622.9,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:51:01.840Z"
+    },
+    {
+      "id": "453f995c-0de5-45e4-ba64-696e53de4512",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.78,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:51:02.302Z"
+    },
+    {
+      "id": "446d1497-a2c0-4fa1-ac76-ee0f43aaf66c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.181,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:51:02.751Z"
+    },
+    {
+      "id": "ef32ec7b-7847-4ec4-bc38-bfbd4722d76b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BTCUSDT",
+          "price": 63273,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:52:01.440Z"
+    },
+    {
+      "id": "4943c730-fc41-457d-8b8d-ebf3118d84a8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1849.55,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:52:01.926Z"
+    },
+    {
+      "id": "aed8870e-8bcf-4731-9b76-749e1f5019cf",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 620.46,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:52:02.390Z"
+    },
+    {
+      "id": "073e5af1-cda2-4f20-aa8d-7d17827c4f6d",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.56,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:52:02.564Z"
+    },
+    {
+      "id": "a2a23172-2982-4f69-97a5-d2fa81179786",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.181,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:52:03.021Z"
+    },
+    {
+      "id": "5601908c-f8a7-4451-b48a-d0691f00f3c5",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 63038.2,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "12131230083"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T20:53:02.918Z"
+    },
+    {
+      "id": "4a596630-37ed-4c8c-b36a-98f92dc5f630",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "ETHUSDT",
+          "price": 1847.59,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:53:03.379Z"
+    },
+    {
+      "id": "e4394c98-9815-4476-b10c-3d699de28f80",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "BNBUSDT",
+          "price": 620.01,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:53:03.833Z"
+    },
+    {
+      "id": "3259ce84-4a8d-4687-9f0b-a71270ea373b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.47,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:53:04.004Z"
+    },
+    {
+      "id": "e1ab67f7-8295-4901-bfa3-d0c90fbd7491",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1788,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:53:04.472Z"
+    },
+    {
+      "id": "8fab869a-e638-4660-8948-4e14aad9fec4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BTCUSDT",
+          "price": 62617,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "12131250966"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T20:55:01.554Z"
+    },
+    {
+      "id": "13594798-1dbb-40b1-ab60-c12f20c0dfa0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "ETHUSDT",
+          "price": 1841.82,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "8265082921"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T20:55:04.066Z"
+    },
+    {
+      "id": "01c4add5-b7fb-4e11-89c5-b75ac7f37bcd",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "sell",
+          "symbol": "BNBUSDT",
+          "price": 616.4,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1214929277"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T20:55:06.548Z"
+    },
+    {
+      "id": "6132a281-07a2-4133-a658-296d5b33a749",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "SOLUSDT",
+          "price": 78.32,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:55:06.717Z"
+    },
+    {
+      "id": "672edab7-39af-42fe-b74c-bd98e5f4df84",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "none",
+          "symbol": "XRPUSDT",
+          "price": 1.1809,
+          "confidence": 0
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "no_actionable_signal"
+        }
+      },
+      "status": "no_signal",
+      "error_message": "No actionable signal",
+      "created_at": "2026-02-05T20:55:06.883Z"
+    },
+    {
+      "id": "70da5ab1-6f9d-4db5-a5cb-7636c0592f81",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "BTCUSDT",
+          "price": 63892.5,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "12132168415"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:36:02.467Z"
+    },
+    {
+      "id": "ac910b70-76fd-4eb3-be00-8e86afec12d0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "ETHUSDT",
+          "price": 1862.22,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "8265425376"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:36:05.137Z"
+    },
+    {
+      "id": "fb5d35f4-7d49-4b15-aad8-3f547ee88ae7",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "SOLUSDT",
+          "price": 79.69,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1660136062"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:36:07.892Z"
+    },
+    {
+      "id": "086aef94-f12f-4851-92cd-063159752aad",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "XRPUSDT",
+          "price": 1.1929,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1388160337"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:36:10.916Z"
+    },
+    {
+      "id": "a6cab196-d35f-48f2-b27c-953c2208b28b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "ETHUSDT",
+          "price": 1863.46,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "8265431231"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:38:03.558Z"
+    },
+    {
+      "id": "a555cca8-e199-45b4-88f6-e80f96cdeb17",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "BNBUSDT",
+          "price": 616.62,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1215093994"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:38:06.601Z"
+    },
+    {
+      "id": "db189e33-43a5-4135-82f2-54102c7fba0a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "SOLUSDT",
+          "price": 79.79,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1660139110"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:38:08.451Z"
+    },
+    {
+      "id": "6245b712-435c-4928-afc9-665002bc91f0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "strategy_id": "9c5ef018-decf-4ef1-b3cb-ac0b795c1b2a",
+      "payload": {
+        "source": "auto_strategy_direct",
+        "signal": {
+          "action": "buy",
+          "symbol": "XRPUSDT",
+          "price": 1.1979,
+          "confidence": 0.8250000000000001
+        },
+        "filter": {
+          "provider": "engine_only",
+          "reason": "Gemini unavailable: missing_gemini_api_key"
+        },
+        "orderId": "1388164366"
+      },
+      "status": "executed",
+      "error_message": null,
+      "created_at": "2026-02-05T22:38:11.186Z"
+    }
+  ],
+  "user_roles": [
+    {
+      "id": "2847e24f-1ada-4ef3-8f95-e6221d88b329",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "role": "admin",
+      "created_at": "2026-02-05T17:38:39.450Z"
+    }
+  ],
+  "trades": [
+    {
+      "id": "53092c6a-34f2-49c0-8ac4-fc58277f2d9c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1878.38,
+      "quantity": 0.07985604616744216,
+      "status": "filled",
+      "order_id": "8264994906",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:28:02.930Z"
+    },
+    {
+      "id": "57a5dece-5b54-4948-9876-79925ecd1d00",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1870.59,
+      "quantity": 0.080188603595657,
+      "status": "filled",
+      "order_id": "8265010312",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:32:05.059Z"
+    },
+    {
+      "id": "455ce410-7e99-42a6-85bb-479aacfb4dd8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1860.94,
+      "quantity": 0.08060442572033488,
+      "status": "filled",
+      "order_id": "8265014115",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:33:03.320Z"
+    },
+    {
+      "id": "0b2464bb-8e6d-4066-9358-1ebc04367476",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 78.72,
+      "quantity": 1.9054878048780488,
+      "status": "filled",
+      "order_id": "1659916050",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:33:05.501Z"
+    },
+    {
+      "id": "d592690a-a7cc-4875-9c74-e338c637edd0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1860.94,
+      "quantity": 0.08060442572033488,
+      "status": "filled",
+      "order_id": "8265021776",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:35:04.653Z"
+    },
+    {
+      "id": "fcd25335-6255-4ca9-8e86-e12c333163c4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 78.36,
+      "quantity": 1.9142419601837672,
+      "status": "filled",
+      "order_id": "1659920741",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:35:07.086Z"
+    },
+    {
+      "id": "5d50c581-9cf5-40c2-bcb8-381113dfbdd9",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 78.68,
+      "quantity": 1.906456532791052,
+      "status": "filled",
+      "order_id": "1659922271",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:36:04.126Z"
+    },
+    {
+      "id": "5c00942b-af70-48d6-93ac-9770e6ffc279",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 63038.2,
+      "quantity": 0.0023795095672148,
+      "status": "filled",
+      "order_id": "12131230083",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:53:02.918Z"
+    },
+    {
+      "id": "38f5fa90-b9be-4ab6-9910-a5a10dfb4bbc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 1836.0367345,
+      "quantity": 0.319,
+      "realized_pnl": 10.31041169,
+      "status": "filled",
+      "order_id": "8265081618",
+      "triggered_by": "manual_close",
+      "created_at": "2026-02-05T20:54:50.456Z"
+    },
+    {
+      "id": "6c8e8c16-0d05-425d-9cf1-3b3f8b1375af",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 62617,
+      "quantity": 0.002395515594806522,
+      "status": "filled",
+      "order_id": "12131250966",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:55:01.554Z"
+    },
+    {
+      "id": "8d03f95b-85be-4f67-82fc-ecfb4c62f4d5",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1841.82,
+      "quantity": 0.0814411831775092,
+      "status": "filled",
+      "order_id": "8265082921",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:55:04.066Z"
+    },
+    {
+      "id": "a76e04d9-7fa8-41c3-8d1a-d9e0ec79b6a4",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BNBUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 616.4,
+      "quantity": 0.24334847501622325,
+      "status": "filled",
+      "order_id": "1214929277",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T20:55:06.548Z"
+    },
+    {
+      "id": "165c081f-f769-4cd4-9b5d-5bcf31970312",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 78.30846133,
+      "quantity": 4,
+      "realized_pnl": 0.54615468,
+      "status": "filled",
+      "order_id": "1659951839",
+      "triggered_by": "manual_close",
+      "created_at": "2026-02-05T20:55:15.499Z"
+    },
+    {
+      "id": "74d59003-bf93-4310-955d-389068223581",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BNBUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 614.38,
+      "quantity": 0.24,
+      "realized_pnl": 0.192,
+      "status": "filled",
+      "order_id": "1214930324",
+      "triggered_by": "manual_close",
+      "created_at": "2026-02-05T20:55:35.414Z"
+    },
+    {
+      "id": "ebb1340c-561f-4dd6-bd75-494c65c919a1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 63892.5,
+      "quantity": 0.0023476933912431035,
+      "status": "filled",
+      "order_id": "12132168415",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:36:02.466Z"
+    },
+    {
+      "id": "26a56def-a010-42f3-9654-53c9b7ac0def",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 1862.22,
+      "quantity": 0.08054902213487128,
+      "status": "filled",
+      "order_id": "8265425376",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:36:05.137Z"
+    },
+    {
+      "id": "8cc38cea-9dae-41fa-9496-fa691f9e4e41",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 79.69,
+      "quantity": 1.8822938888191743,
+      "status": "filled",
+      "order_id": "1660136062",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:36:07.892Z"
+    },
+    {
+      "id": "2cf5ae9b-7ff9-4163-bd2e-82cc50505a9a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "XRPUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 1.1929,
+      "quantity": 125.74398524603906,
+      "status": "filled",
+      "order_id": "1388160337",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:36:10.916Z"
+    },
+    {
+      "id": "264fca01-bf06-409d-9607-be7cae9bca1f",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 1863.46,
+      "quantity": 0.08049542249364086,
+      "status": "filled",
+      "order_id": "8265431231",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:38:03.558Z"
+    },
+    {
+      "id": "434286cb-8404-4959-a8a7-c3ce41765b34",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BNBUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 616.62,
+      "quantity": 0.24326165223314197,
+      "status": "filled",
+      "order_id": "1215093994",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:38:06.601Z"
+    },
+    {
+      "id": "39e2b24d-b384-43b2-bcf5-4f9091885735",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 79.79,
+      "quantity": 1.8799348289259303,
+      "status": "filled",
+      "order_id": "1660139110",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:38:08.451Z"
+    },
+    {
+      "id": "597f205c-ef76-4902-b353-2d7655853032",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "XRPUSDT",
+      "side": "buy",
+      "order_type": "market",
+      "price": 1.1979,
+      "quantity": 125.2191334835963,
+      "status": "filled",
+      "order_id": "1388164366",
+      "triggered_by": "auto_strategy",
+      "created_at": "2026-02-05T22:38:11.186Z"
+    },
+    {
+      "id": "70aaeaeb-290b-49ac-91da-2fb295ba40f1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "XRPUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 1.25565409,
+      "quantity": 122,
+      "realized_pnl": 7.04804004,
+      "status": "filled",
+      "order_id": "1388696407",
+      "triggered_by": "manual_close",
+      "created_at": "2026-02-06T03:25:40.139Z"
+    },
+    {
+      "id": "53a110a4-ae10-42a8-b2da-28217433e497",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "sell",
+      "order_type": "market",
+      "price": 84.09,
+      "quantity": 2,
+      "realized_pnl": 8.36,
+      "status": "filled",
+      "order_id": "1662029024",
+      "triggered_by": "manual_close",
+      "created_at": "2026-02-06T15:24:42.962Z"
+    }
+  ],
+  "gas_fee_balances": [
+    {
+      "id": "0255437a-73c4-479d-8ac6-689491b23293",
+      "created_at": "2026-02-05T17:21:00.100Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "environment": "testnet",
+      "balance": 27.063018077,
+      "total_deposited": 35,
+      "updated_at": "2026-02-06T15:25:00.895Z",
+      "total_deducted": 7.936981922999999
+    },
+    {
+      "id": "37518c58-e129-487c-bafe-fac5b70e2945",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "environment": "testnet",
+      "balance": 200,
+      "total_deposited": 200,
+      "total_deducted": 0,
+      "created_at": "2026-02-05T17:38:39.450Z",
+      "updated_at": "2026-02-05T22:01:09.802Z"
+    },
+    {
+      "id": "64ffb2ce-8a24-49a2-9e47-015afb1039e3",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "environment": "mainnet",
+      "balance": 0,
+      "total_deposited": 0,
+      "total_deducted": 0,
+      "created_at": "2026-02-05T17:38:39.450Z",
+      "updated_at": "2026-02-05T17:38:39.450Z"
+    },
+    {
+      "id": "804a0f90-a300-4f1d-850d-ff9c1049afc8",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "environment": "mainnet",
+      "balance": 20,
+      "total_deposited": 60,
+      "total_deducted": 40,
+      "created_at": "2026-02-05T17:44:24.803Z",
+      "updated_at": "2026-02-05T18:01:44.285Z"
+    },
+    {
+      "id": "168e5cdf-c456-40ea-b28d-4934ea710b4a",
+      "user_id": "d48a51c4-f0c0-4d4e-84c6-8543b4bcac6c",
+      "environment": "testnet",
+      "balance": 0,
+      "total_deposited": 0,
+      "total_deducted": 0,
+      "created_at": "2026-02-05T19:09:26.012Z",
+      "updated_at": "2026-02-05T19:09:26.012Z"
+    },
+    {
+      "id": "b6233c89-9acb-4248-a4d5-724a6577911a",
+      "user_id": "d48a51c4-f0c0-4d4e-84c6-8543b4bcac6c",
+      "environment": "mainnet",
+      "balance": 0,
+      "total_deposited": 0,
+      "total_deducted": 0,
+      "created_at": "2026-02-05T19:09:26.012Z",
+      "updated_at": "2026-02-05T19:09:26.012Z"
+    }
+  ],
+  "gas_fee_transactions": [
+    {
+      "id": "e8622f66-8de0-41ca-93ee-5887616a396f",
+      "created_at": "2026-02-05T17:21:00.107Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 10,
+      "transaction_type": "demo_deposit",
+      "description": "Demo deposit (instant credit)",
+      "balance_before": 0,
+      "balance_after": 10,
+      "environment": "testnet"
+    },
+    {
+      "id": "3e637e35-1a10-4953-a975-6b221ad9b2f0",
+      "created_at": "2026-02-05T17:25:26.509Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 25,
+      "transaction_type": "demo_deposit",
+      "description": "Demo deposit (instant credit)",
+      "balance_before": 10,
+      "balance_after": 35,
+      "environment": "testnet"
+    },
+    {
+      "id": "a2749d0d-3a9b-4c30-bd46-19575f2168dc",
+      "created_at": "2026-02-05T17:45:10.720Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 50,
+      "transaction_type": "admin_credit",
+      "description": "Admin added gas fee (mainnet)",
+      "balance_before": 0,
+      "balance_after": 50,
+      "environment": "mainnet"
+    },
+    {
+      "id": "92ed59b3-f6ae-4cd1-ba60-2ebe6bbcedf1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 10,
+      "transaction_type": "deposit",
+      "description": "Deposit approved by admin: approved",
+      "balance_before": 50,
+      "balance_after": 60,
+      "environment": "mainnet",
+      "created_at": "2026-02-05T17:48:13.360Z"
+    },
+    {
+      "id": "951c8188-6ca0-4f52-9efa-7c15b18d0307",
+      "created_at": "2026-02-05T18:01:44.295Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -40,
+      "transaction_type": "admin_deduction",
+      "description": "Admin deducted gas fee (mainnet)",
+      "balance_before": 60,
+      "balance_after": 20,
+      "environment": "mainnet"
+    },
+    {
+      "id": "d562773f-4eb1-4910-82f8-225e17673b60",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -3.093123507,
+      "transaction_type": "service_fee",
+      "description": "Service fee for profitable trade",
+      "trade_id": "38f5fa90-b9be-4ab6-9910-a5a10dfb4bbc",
+      "balance_before": 35,
+      "balance_after": 31.906876493,
+      "environment": "testnet",
+      "created_at": "2026-02-05T21:27:01.124Z"
+    },
+    {
+      "id": "2a5af85c-a8be-43a3-9b01-85ee39315fb3",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -0.163846404,
+      "transaction_type": "service_fee",
+      "description": "Service fee for profitable trade",
+      "trade_id": "165c081f-f769-4cd4-9b5d-5bcf31970312",
+      "balance_before": 31.906876493,
+      "balance_after": 31.743030088999998,
+      "environment": "testnet",
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "ac5dd0a2-06b8-4331-93b8-aa9cf87d3e5c",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -0.0576,
+      "transaction_type": "service_fee",
+      "description": "Service fee for profitable trade",
+      "trade_id": "74d59003-bf93-4310-955d-389068223581",
+      "balance_before": 31.743030088999998,
+      "balance_after": 31.685430088999997,
+      "environment": "testnet",
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "932f5ca3-cfa7-40c3-a6e2-410a2047d023",
+      "created_at": "2026-02-05T22:01:10.038Z",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "amount": 200,
+      "transaction_type": "admin_credit",
+      "description": "Admin added gas fee (testnet)",
+      "balance_before": 0,
+      "balance_after": 200,
+      "environment": "testnet"
+    },
+    {
+      "id": "16f123d9-1102-4d86-b4a5-4973242a57b0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -2.114412012,
+      "transaction_type": "service_fee",
+      "description": "Service fee for profitable trade",
+      "trade_id": "70aaeaeb-290b-49ac-91da-2fb295ba40f1",
+      "balance_before": 31.685430088999997,
+      "balance_after": 29.571018076999998,
+      "environment": "testnet",
+      "created_at": "2026-02-06T03:26:00.889Z"
+    },
+    {
+      "id": "6100daa9-bcb3-4f2d-b07d-c0974afb8df2",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": -2.5079999999999996,
+      "transaction_type": "service_fee",
+      "description": "Service fee for profitable trade",
+      "trade_id": "53a110a4-ae10-42a8-b2da-28217433e497",
+      "balance_before": 29.571018076999998,
+      "balance_after": 27.063018077,
+      "environment": "testnet",
+      "created_at": "2026-02-06T15:25:00.895Z"
+    }
+  ],
+  "bot_status": [
+    {
+      "id": "ba1d35be-930b-4569-bd40-1d9d6e4ee90f",
+      "created_at": "2026-02-05T17:34:37.220Z",
+      "total_trades": 0,
+      "successful_trades": 0,
+      "failed_trades": 0,
+      "last_trade_at": null,
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "is_running": true,
+      "environment": "testnet",
+      "updated_at": "2026-02-05T19:30:27.532Z"
+    },
+    {
+      "id": "17d06c2f-e171-4d54-bc60-18a97f9070c7",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "is_running": false,
+      "environment": "testnet",
+      "exchange": "binance",
+      "last_trade_at": null,
+      "total_trades": 0,
+      "successful_trades": 0,
+      "failed_trades": 0,
+      "created_at": "2026-02-05T17:38:39.450Z",
+      "updated_at": "2026-02-05T17:38:39.450Z"
+    },
+    {
+      "id": "5254daac-c61f-4524-99f7-4fc930851030",
+      "user_id": "d48a51c4-f0c0-4d4e-84c6-8543b4bcac6c",
+      "is_running": false,
+      "environment": "testnet",
+      "exchange": "binance",
+      "last_trade_at": null,
+      "total_trades": 0,
+      "successful_trades": 0,
+      "failed_trades": 0,
+      "created_at": "2026-02-05T19:09:26.012Z",
+      "updated_at": "2026-02-05T19:09:26.012Z"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "7c47e1a4-a448-47dd-9544-d5af96fd2837",
+      "user_id": "5a402450-9bdf-4903-9158-569081444fd0",
+      "display_name": "Admin",
+      "email": "admin@mail.com",
+      "referral_code": "28433d0636bf6698",
+      "created_at": "2026-02-05T17:38:39.450Z",
+      "updated_at": "2026-02-05T17:38:39.450Z"
+    },
+    {
+      "id": "3dd98fe0-e7b4-4b77-a0d0-387674098cdc",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "display_name": null,
+      "email": "mushfiqmoon3@gmail.com",
+      "referrer_id": null,
+      "referral_code": "cb3888816e267a44",
+      "created_at": "2026-02-05T17:44:24.803Z",
+      "updated_at": "2026-02-05T17:44:24.803Z"
+    },
+    {
+      "id": "72eb2fd2-fca2-451d-a91b-e000f5db6dec",
+      "user_id": "d48a51c4-f0c0-4d4e-84c6-8543b4bcac6c",
+      "display_name": null,
+      "email": "moonbd01717@gmail.com",
+      "referrer_id": null,
+      "referral_code": "6c72ed31fcb19d03",
+      "created_at": "2026-02-05T19:09:26.012Z",
+      "updated_at": "2026-02-05T19:09:26.012Z"
+    }
+  ],
+  "pending_deposits": [
+    {
+      "id": "21e499d7-d6f8-4a80-8fc2-282850d60113",
+      "created_at": "2026-02-05T17:45:58.177Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 10,
+      "environment": "mainnet",
+      "transaction_hash": "dfdxhghghghghghh",
+      "wallet_address": "xgfxfggfghghxhxhxhghgxhgx",
+      "proof_screenshot_url": "http://localhost:8080/uploads/deposit-proofs/e70b4418-6af6-4930-8e3a-6e772836c44e/1770313558111.png",
+      "status": "approved",
+      "admin_notes": "approved",
+      "approved_by": "5a402450-9bdf-4903-9158-569081444fd0",
+      "approved_at": "2026-02-05T17:48:13.360Z"
+    },
+    {
+      "id": "b127c0a0-1813-4a28-aadf-fa64af12368e",
+      "created_at": "2026-02-05T17:50:36.077Z",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "amount": 10,
+      "environment": "mainnet",
+      "transaction_hash": "bvbvbvb vbvbvbvb",
+      "wallet_address": "vbvbvxbxvbvxbvxbvbvbvb",
+      "proof_screenshot_url": "http://localhost:8080/uploads/deposit-proofs/e70b4418-6af6-4930-8e3a-6e772836c44e/1770313836038.png",
+      "status": "rejected",
+      "admin_notes": null,
+      "approved_by": "5a402450-9bdf-4903-9158-569081444fd0",
+      "approved_at": "2026-02-05T17:54:27.489Z"
+    }
+  ],
+  "deposit_addresses": [
+    {
+      "id": "9ef16b69-6bb3-42c3-a9ae-c26ebdadba61",
+      "created_at": "2026-02-05T17:58:32.158Z",
+      "network": "BSC",
+      "address": "0x691c7c84f2aa9f6dcb7b1da11f46943f9b4b93f5",
+      "label": "",
+      "created_by": "5a402450-9bdf-4903-9158-569081444fd0",
+      "is_active": true,
+      "updated_at": "2026-02-05T17:58:34.395Z"
+    }
+  ],
+  "app_settings": [
+    {
+      "id": "97db96ba-da9a-405b-8460-093739f23255",
+      "created_at": "2026-02-05T22:08:56.938Z",
+      "key": "maintenance_mode",
+      "bool_value": false,
+      "updated_at": "2026-02-05T22:09:12.045Z"
+    }
+  ],
+  "positions": [
+    {
+      "id": "5c64101a-2a4c-4dc3-85a2-cf31966ecdd0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "size": 0.0023795095672148,
+      "entry_price": 63038.2,
+      "leverage": 10,
+      "is_open": true,
+      "stop_loss": 63416.4292,
+      "take_profit": 62533.8944,
+      "created_at": "2026-02-05T20:53:02.918Z",
+      "updated_at": "2026-02-05T20:53:02.918Z"
+    },
+    {
+      "id": "5dd45f8f-6920-4725-8f71-defdb87baf93",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "size": 0.002395515594806522,
+      "entry_price": 62617,
+      "leverage": 10,
+      "is_open": true,
+      "stop_loss": 62992.702,
+      "take_profit": 62116.064,
+      "created_at": "2026-02-05T20:55:01.554Z",
+      "updated_at": "2026-02-05T20:55:01.554Z"
+    },
+    {
+      "id": "8d266e4d-e974-4a22-8d3e-345fd0a54693",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "short",
+      "size": 0.0814411831775092,
+      "entry_price": 1841.82,
+      "leverage": 10,
+      "is_open": true,
+      "stop_loss": 1852.8709199999998,
+      "take_profit": 1827.0854399999998,
+      "created_at": "2026-02-05T20:55:04.066Z",
+      "updated_at": "2026-02-05T20:55:04.066Z"
+    },
+    {
+      "id": "26a11909-3129-4d79-a00b-5f7d233a11c1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BNBUSDT",
+      "side": "short",
+      "size": 0.24334847501622325,
+      "entry_price": 616.4,
+      "leverage": 10,
+      "is_open": true,
+      "stop_loss": 620.0984,
+      "take_profit": 611.4688,
+      "created_at": "2026-02-05T20:55:06.548Z",
+      "updated_at": "2026-02-05T20:55:06.548Z"
+    },
+    {
+      "id": "d232a51a-dbce-4136-a9ea-3d28da1e5821",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BTCUSDT",
+      "side": "long",
+      "size": 0.0023476933912431035,
+      "entry_price": 63892.5,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 63509.145,
+      "take_profit": 64403.64,
+      "created_at": "2026-02-05T22:36:02.466Z",
+      "updated_at": "2026-02-05T22:36:02.466Z"
+    },
+    {
+      "id": "562202cd-1307-489a-aa0d-b4a13c8335d0",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "long",
+      "size": 0.08054902213487128,
+      "entry_price": 1862.22,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 1851.04668,
+      "take_profit": 1877.11776,
+      "created_at": "2026-02-05T22:36:05.137Z",
+      "updated_at": "2026-02-05T22:36:05.137Z"
+    },
+    {
+      "id": "ebc252ee-b737-4806-82af-2199cd8fdc2a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "long",
+      "size": 1.8822938888191743,
+      "entry_price": 79.69,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 79.21186,
+      "take_profit": 80.32751999999999,
+      "created_at": "2026-02-05T22:36:07.892Z",
+      "updated_at": "2026-02-05T22:36:07.892Z"
+    },
+    {
+      "id": "b269ee82-c636-4e72-a20a-d3c66911fdf1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "XRPUSDT",
+      "side": "long",
+      "size": 125.74398524603906,
+      "entry_price": 1.1929,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 1.1857426,
+      "take_profit": 1.2024432,
+      "created_at": "2026-02-05T22:36:10.916Z",
+      "updated_at": "2026-02-05T22:36:10.916Z"
+    },
+    {
+      "id": "889462fe-1a79-40dc-b751-87565394b506",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "ETHUSDT",
+      "side": "long",
+      "size": 0.08049542249364086,
+      "entry_price": 1863.46,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 1852.27924,
+      "take_profit": 1878.36768,
+      "created_at": "2026-02-05T22:38:03.558Z",
+      "updated_at": "2026-02-05T22:38:03.558Z"
+    },
+    {
+      "id": "b5c24ca1-f65d-4d52-99be-616c89fe93f1",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "BNBUSDT",
+      "side": "long",
+      "size": 0.24326165223314197,
+      "entry_price": 616.62,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 612.92028,
+      "take_profit": 621.55296,
+      "created_at": "2026-02-05T22:38:06.601Z",
+      "updated_at": "2026-02-05T22:38:06.601Z"
+    },
+    {
+      "id": "0c731f67-d188-4135-a96f-82a37193a0ec",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "SOLUSDT",
+      "side": "long",
+      "size": 1.8799348289259303,
+      "entry_price": 79.79,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 79.31126,
+      "take_profit": 80.42832000000001,
+      "created_at": "2026-02-05T22:38:08.451Z",
+      "updated_at": "2026-02-05T22:38:08.451Z"
+    },
+    {
+      "id": "f22cb4a2-e305-4564-ac16-aca60e41e45a",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "exchange": "binance",
+      "environment": "testnet",
+      "symbol": "XRPUSDT",
+      "side": "long",
+      "size": 125.2191334835963,
+      "entry_price": 1.1979,
+      "leverage": 7,
+      "is_open": true,
+      "stop_loss": 1.1907126,
+      "take_profit": 1.2074832,
+      "created_at": "2026-02-05T22:38:11.186Z",
+      "updated_at": "2026-02-05T22:38:11.186Z"
+    }
+  ],
+  "profit_settlements": [
+    {
+      "id": "a9b74c3a-d5cb-494e-bcd9-d97cce49c84b",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "38f5fa90-b9be-4ab6-9910-a5a10dfb4bbc",
+      "gross_profit": 10.31041169,
+      "service_fee_rate": 0.3,
+      "service_fee_amount": 3.093123507,
+      "net_profit": 7.217288183000001,
+      "created_at": "2026-02-05T21:27:01.124Z"
+    },
+    {
+      "id": "b7c666db-a6d0-491a-b501-6f12c3676240",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "165c081f-f769-4cd4-9b5d-5bcf31970312",
+      "gross_profit": 0.54615468,
+      "service_fee_rate": 0.3,
+      "service_fee_amount": 0.163846404,
+      "net_profit": 0.382308276,
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "906e2a84-3fde-4898-89bf-293d00783b91",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "74d59003-bf93-4310-955d-389068223581",
+      "gross_profit": 0.192,
+      "service_fee_rate": 0.3,
+      "service_fee_amount": 0.0576,
+      "net_profit": 0.13440000000000002,
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "ea0eb68c-82de-4946-8af2-6781a8f5d2ba",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "70aaeaeb-290b-49ac-91da-2fb295ba40f1",
+      "gross_profit": 7.04804004,
+      "service_fee_rate": 0.3,
+      "service_fee_amount": 2.114412012,
+      "net_profit": 4.933628028,
+      "created_at": "2026-02-06T03:26:00.889Z"
+    },
+    {
+      "id": "2254020a-603d-4c61-9f12-d8c24a0bbea6",
+      "user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "53a110a4-ae10-42a8-b2da-28217433e497",
+      "gross_profit": 8.36,
+      "service_fee_rate": 0.3,
+      "service_fee_amount": 2.5079999999999996,
+      "net_profit": 5.852,
+      "created_at": "2026-02-06T15:25:00.895Z"
+    }
+  ],
+  "referral_commissions": [],
+  "admin_earnings": [
+    {
+      "id": "3dbc802a-554b-4dbb-a3bc-0bd0e9563afc",
+      "source_user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "38f5fa90-b9be-4ab6-9910-a5a10dfb4bbc",
+      "gross_profit": 10.31041169,
+      "total_service_fee": 3.093123507,
+      "referral_commissions_paid": 0,
+      "admin_share": 3.093123507,
+      "created_at": "2026-02-05T21:27:01.124Z"
+    },
+    {
+      "id": "ea010afa-0868-4036-9e3b-55e5c864b6d5",
+      "source_user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "165c081f-f769-4cd4-9b5d-5bcf31970312",
+      "gross_profit": 0.54615468,
+      "total_service_fee": 0.163846404,
+      "referral_commissions_paid": 0,
+      "admin_share": 0.163846404,
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "318238fa-2e52-4952-b016-912ebe063b75",
+      "source_user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "74d59003-bf93-4310-955d-389068223581",
+      "gross_profit": 0.192,
+      "total_service_fee": 0.0576,
+      "referral_commissions_paid": 0,
+      "admin_share": 0.0576,
+      "created_at": "2026-02-05T21:27:01.126Z"
+    },
+    {
+      "id": "93328329-daf7-4e72-81d3-96bbf4e05898",
+      "source_user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "70aaeaeb-290b-49ac-91da-2fb295ba40f1",
+      "gross_profit": 7.04804004,
+      "total_service_fee": 2.114412012,
+      "referral_commissions_paid": 0,
+      "admin_share": 2.114412012,
+      "created_at": "2026-02-06T03:26:00.889Z"
+    },
+    {
+      "id": "12682142-fdf8-4a55-a035-e03d0f220da0",
+      "source_user_id": "e70b4418-6af6-4930-8e3a-6e772836c44e",
+      "trade_id": "53a110a4-ae10-42a8-b2da-28217433e497",
+      "gross_profit": 8.36,
+      "total_service_fee": 2.5079999999999996,
+      "referral_commissions_paid": 0,
+      "admin_share": 2.5079999999999996,
+      "created_at": "2026-02-06T15:25:00.895Z"
+    }
+  ]
+}
