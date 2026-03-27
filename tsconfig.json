@@ -5,6 +5,10 @@
     "moduleResolution": "NodeNext",
     "outDir": "dist",
     "rootDir": "src",
+
+    "lib": ["ES2022"],          // ✅ IMPORTANT FIX
+    "types": ["node"],          // ✅ Node types only
+
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -12,4 +16,3 @@
   },
   "include": ["src/**/*.ts"]
 }
-
