@@ -209,7 +209,7 @@ router.post('/', requireAuth, async (req: AuthenticatedRequest, res) => {
         exchange, 
         product, 
         environment,
-        available_keys: allKeysResult.rows.map(k => ({
+        available_keys: allKeysResult.rows.map((k: { exchange: string; product: string; environment: string; is_active: boolean }) => ({
           exchange: k.exchange,
           product: k.product,
           environment: k.environment,
@@ -512,7 +512,13 @@ router.post('/', requireAuth, async (req: AuthenticatedRequest, res) => {
             category: 'spot',
             symbol,
           });
-          const tickerData = await response.json();
+          const tickerData = await response.json() as {
+            result?: {
+              list?: Array<{
+                lastPrice?: string;
+              }>;
+            };
+          };
           // Extract price from Bybit response
           if (tickerData.result?.list?.[0]?.lastPrice) {
             result = { price: tickerData.result.list[0].lastPrice };
